@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dropdown Fields Article</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Dropdown menus and a revised design</h1>
+      </header>
+      <main>
+        <p>
+          Dropdown menus are a staple of modern user interfaces, offering users
+          a compact way to navigate options, select inputs, and execute
+          commands. Despite their widespread use, not all dropdowns are created
+          equal—some enhance usability, while others frustrate users with poor
+          design choices. This article explores how dropdown menus are
+          implemented across various applications, analyzing their effectiveness
+          in terms of usability, accessibility, and efficiency. By rethinking
+          dropdown interactions, we aim to create a more intuitive and
+          accessible approach that balances functionality with ease of use.
+        </p>
+
+        <h2>Examples of dropdowns</h2>
+        <p>
+          To better understand how dropdown menus impact user experience, I
+          examined three different applications—Reddit, Amazon, and the RTI
+          International website—and how they implement this common UI element.
+        </p>
+        <h3>Reddit Communities Dropdown</h3>
+        The dropdown allow users to quickly access and navigate between
+        different subreddit communities. The menu holds a list of joined
+        communities for easy discovery. The dropdown also supports favoriting
+        communities (via a star icon) to prioritize frequently visited ones.
+
+        <div class="image-row">
+          <figure>
+            <img
+              src="./images/reddit/inactive_reddit.png"
+              alt="Inactive(Collapsed) Reddit Communities Dropdown"
+              width="300"
+            />
+            <figcaption>
+              Inactive(Collapsed) Reddit Communities Dropdown
+            </figcaption>
+          </figure>
+          <figure>
+            <img
+              src="./images/reddit/reddit_active.png"
+              alt="Active(Expaned) Reddit Communities Dropdown"
+              width="300"
+            />
+            <figcaption>Active(Expaned) Reddit Communities Dropdown</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="./images/reddit/focus_active_reddit.png"
+              alt="Tab Focus Active(Expaned) Reddit Communities Dropdown"
+              width="300"
+            />
+            <figcaption>
+              Tab Focus Active(Expaned) Reddit Communities Dropdown
+            </figcaption>
+          </figure>
+        </div>
+        <h3>Amazon Country/Region Dropdown</h3>
+        The primary use is to let users select their current country or region
+        for their shipping address.
+        <div class="image-row">
+          <figure>
+            <img
+              src="./images/amazon/amazon_inactive.png"
+              alt="Inactive(Collapsed) Amazon Country/Region Dropdown"
+              width="400"
+            />
+            <figcaption>
+              Inactive(Collapsed) Amazon Country/Region Dropdown
+            </figcaption>
+          </figure>
+          <figure>
+            <img
+              src="./images/amazon/active_amazon.png"
+              alt="Active(Expaned) Amazon Country/Region Dropdown"
+              width="300"
+            />
+            <figcaption>
+              Active(Expaned) Amazon Country/Region Dropdown
+            </figcaption>
+          </figure>
+          <figure>
+            <img
+              src="./images/amazon/focus_active_amazon.png"
+              alt="Tab Focus Active(Expaned) Amazon Country/Region Dropdown"
+              width="300"
+            />
+            <figcaption>
+              Tab Focus Active(Expaned) Amazon Country/Region Dropdown
+            </figcaption>
+          </figure>
+        </div>
+        <h3>RTL International Navbar Dropdown</h3>
+        The dropdown is used here within the nav bar to help users explore
+        different sections of the RTL website efficiently.
+
+        <div class="image-row">
+          <figure>
+            <img
+              src="./images/rtl/inactive_rtl.png"
+              alt="Inactive(Collapsed) RTL International Navbar Dropdown"
+              width="300"
+            />
+            <figcaption>
+              Inactive(Collapsed) RTL International Navbar Dropdown
+            </figcaption>
+          </figure>
+
+          <figure>
+            <img
+              src="./images/rtl/rtl_active.png"
+              alt="Active(Expaned) RTL International Navbar Dropdown"
+              width="400"
+            />
+            <figcaption>
+              Active(Expaned) RTL International Navbar Dropdown
+            </figcaption>
+          </figure>
+
+          <figure>
+            <img
+              src="./images/rtl/focus_active_rtl.png"
+              alt="Tab Focus Active(Expaned) RTL International Navbar  Dropdown"
+              width="350"
+            />
+            <figcaption>
+              Tab Focus Active(Expaned) RTL International Navbar Dropdown
+            </figcaption>
+          </figure>
+        </div>
+
+        <h2>Evaluating Interaction Across Input Methods</h2>
+        <p>
+          When designing or evaluating user interfaces, it’s essential to
+          consider how users interact with components using different input
+          methods. A well-designed dropdown menu should be accessible and
+          intuitive, whether someone is using a mouse, keyboard, or touchscreen.
+          To illustrate this, we’ve analyzed how each of the dropdown menus from
+          above behave across three primary interaction modes:
+        </p>
+        <ul>
+          <li>
+            <strong>Mouse/Touchpad</strong> – The default mode for most desktop
+            users.
+          </li>
+          <li>
+            <strong>Keyboard-Only Navigation</strong> – Essential for
+            accessibility and efficiency, especially for power users and those
+            who rely on assistive technologies.
+          </li>
+          <li>
+            <strong>Mobile/Touchscreen</strong> – Crucial for users on
+            smartphones and tablets, where interactions are gesture-based.
+          </li>
+        </ul>
+        <p>
+          The table below summarizes how each dropdown functions across these
+          input methods:
+        </p>
+
+        <figure>
+          <img
+            src="./images/inputs_comparison.png"
+            alt="Comparing between inputs"
+            width="100%"
+          />
+          <figcaption>
+            Comparing between applications based on each input menthods
+          </figcaption>
+        </figure>
+
+        <p>
+          Every interaction with a UI component triggers an output which can a
+          visual, textual, or hidden response that represents the component’s
+          current state. These outputs help users understand whether an action
+          was successful, whether an element is interactive, or what state a
+          component is in at any given moment. Some outputs are purely visual,
+          such as changes in color, opacity, border thickness, or a button
+          appearing pressed when clicked. If an output is ambiguous or
+          inconsistent across interaction types, it can lead to confusion and
+          inefficiency in navigation. The table below summarizes how each
+          dropdown visually and functionally represents its state across the
+          different applications based on each interaction mode:
+        </p>
+
+        <figure>
+          <img
+            src="./images/outputs_comparison.png"
+            alt="Comparing between outputs"
+            width="100%"
+          />
+          <figcaption>
+            Comparing outputs between applications based on each input menthods
+          </figcaption>
+        </figure>
+
+        <h2>Understanding state models for dropdowns</h2>
+
+        <p>
+          When designing interactive components, it's crucial to consider how
+          they change based on user interactions. A state model helps us
+          visualize the different conditions a component can be in and how users
+          transition between them. In the previous section, we explored how
+          different dropdown menus behave across mouse, keyboard, and touch
+          inputs. Now, we’ll take a structured approach by defining two state
+          models that outline how users interact specifically for the case of
+          the Amazon dropdown.
+        </p>
+        <p>
+          The first model will focus on how users interact with the dropdown
+          using a mouse or touchpad—hovering, clicking, and navigating.
+        </p>
+        <figure>
+          <img
+            src="./images/states/mouse_amazon.png"
+            alt="State model for mouse users"
+            width="1000"
+          />
+          <figcaption>State model for mouse users</figcaption>
+        </figure>
+        <p>
+          The second model will focus on keyboard navigation, detailing how
+          users move through the component using the Tab key, Enter key, and
+          other shortcuts.
+        </p>
+
+        <figure>
+          <img
+            src="./images/states/key_amazon.png"
+            alt="State model for keyboard users"
+            width="1000"
+          />
+          <figcaption>State model for keyboard users</figcaption>
+        </figure>
+
+        Note that for the existing dropdown menu wile clicking the dropdown
+        button works,the dropdown button itself is hidden. Also users must
+        manually scroll through a long list of countries, and it is not
+        intuitive that you can type when the dropdown is expanded to focus on
+        the specifc country instead of scrolling. How about we add a search bar
+        to allow users to filter and quickly select their country?
+
+        <h2>Proposed Dropdown Redesign</h2>
+        <p>
+          In adding the search bar, we must now update out state models to
+          account for the state of the search bar:
+        </p>
+        <figure>
+          <img
+            src="./images/states/re_mouse_amazon.png"
+            alt="Revised state model for mouse users"
+            width="1000"
+          />
+          <figcaption>Revised state model for mouse users</figcaption>
+        </figure>
+
+        <figure>
+          <img
+            src="./images/states/re_key_amazon.png"
+            alt="Revised state model for keyboard users"
+            width="1000"
+          />
+          <figcaption>Revised state model for keyboard users</figcaption>
+        </figure>
+
+        <p>
+          The revised state model introduces a significant improvement in
+          efficiency for dropdown menus by incorporating a search bar at the top
+          of the menu. This enhancement addresses the challenges of navigating
+          long lists, such as country selections, by enabling users to type and
+          filter options dynamically. It also enhances accessibility for users
+          with motor impairments who may struggle with precise scrolling.
+          However, this improvement comes at the cost of learnability—users
+          unfamiliar with search-based dropdowns may not immediately realize
+          they can type to filter results. Memorability could also be impacted,
+          as users who do not frequently interact with the dropdown might forget
+          about the search feature and default to manual scrolling. Balancing
+          these factors ensures that the redesign is more user-friendly overall,
+          but it still requires clear visual cues or instructions to accommodate
+          all users effectively. See the Figma prototype below to see these
+          enhancements:
+        </p>
+
+        <figure>
+          <img
+            src="./images/revised_design.png"
+            alt="Revised design"
+            width="1200"
+          />
+          <figcaption>Revised design</figcaption>
+        </figure>
+
+        <h2>
+          Observations on Usability and Accessibility in the Original Design
+        </h2>
+
+        <p>
+          The original dropdown design supports basic mouse and keyboard
+          interactions, ensuring users can navigate through the list using
+          either input method. It includes visual feedback (e.g., button color
+          changes) when hovering over options, aiding users in understanding
+          their current focus. Users can navigate the dropdown using the Tab key
+          and select options with Enter or Spacebar, adhering to basic
+          accessibility standards. The design ensures focus is visible (e.g.,
+          blue border) when navigating with a keyboard, which is critical for
+          users with visual impairments. In redesigning the dropdown, I retained
+          these strengths while improving efficiency and accessibility.
+        </p>
+
+        <p>
+          In the original design, users must scroll through a long list to find
+          their country/region. This poses a challenge for individuals with
+          motor impairments who struggle with fine cursor movements or prolonged
+          scrolling. Without a search feature, these users may experience
+          frustration and difficulty selecting their preferred country quickly.
+          An example of positive impact for accessibility, is that the original
+          design supports basic keyboard navigation, allowing users to tab
+          through elements and select options using the Enter or Spacebar keys.
+          This benefits users with motor impairments who may rely on keyboards
+          instead of a mouse. In terms of negative impact, users must scroll
+          through a long list to find their country/region. This poses a
+          challenge for individuals with motor impairments who struggle with
+          fine cursor movements or prolonged scrolling. Without a search
+          feature, these users may experience frustration and difficulty
+          selecting their preferred option quickly.
+        </p>
+
+        <h2>
+          Accessibility Considerations Addressed in the Revised Design Search
+        </h2>
+
+        <p>
+          In this
+          <a href="https://www.youtube.com/watch?v=-iccWRhKZa8"> talk </a>,
+          Holmes defines mismatch as a design failure where tools, systems, or
+          environments exclude people because they don’t align with diverse
+          human abilities. Mismatches arise from ability bias—designing for
+          abilities similar to the designer’s own (e.g., motion-sensor toilets
+          assume users can wave hands) and Holmes argues that resolving
+          mismatches isn’t just about access but fostering belonging and
+          innovation through intentional, inclusive design. The revised dropdown
+          design, which incorporates a search bar, directly addresses a mismatch
+          by reducing the disconnect between user abilities and the design of
+          the dropdown menu. In its original form, the mismatch arises from
+          assuming all users can efficiently interact with static, scroll-heavy
+          lists. By introducing a search bar, the design accommodates users who
+          struggle with fine motor control (e.g., due to tremors or
+          disabilities) no longer need to scroll extensively or click repeatedly
+          or type quickly to locate options. The original design also did not
+          provide any visual focus indicators for keyboard users beyond the
+          default browser styling.Typing into the search bar offers a more
+          accessible way to locate options and the search bar simplifies the
+          process by dynamically filtering results as they type. The redesign
+          ensures that keyboard users can tab into the search bar and type their
+          selection without needing to navigate through every option
+          sequentially and allows screen readers to announce filtered results
+          more effectively, reducing the need for exhaustive exploration of the
+          list.
+        </p>
+
+        <h2>Prioritization of User Groups in Component Design</h2>
+
+        <p>
+          Among mouse, keyboard, touch/mobile, and screen reader users, mouse
+          and touch/mobile users are typically prioritized when designing
+          components. This is evident in how dropdowns are often optimized for
+          clicking, tapping, and scrolling, rather than for structured keyboard
+          navigation or robust screen reader support. This prioritization can
+          negatively impact keyboard and screen reader users, making
+          interactions more cumbersome. For example, if keyboard focus
+          indicators are weak or missing, users navigating with the Tab key may
+          struggle to determine where they are in the dropdown. Similarly, if a
+          screen reader does not provide real-time feedback on dropdown state
+          changes, visually impaired users might be unsure whether their input
+          has been registered. By prioritizing only the most common interaction
+          methods, components risk excluding users with disabilities, leading to
+          frustration and accessibility barriers. A more inclusive design
+          approach would ensure that all interaction methods—especially keyboard
+          and screen reader navigation—are equally considered.
+        </p>
+      </main>
+    </div>
+  </body>
+</html>

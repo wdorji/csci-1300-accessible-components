@@ -1,0 +1,67 @@
+/* styles.css */
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f5f5eb;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+main p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.dropcap {
+  font-size: 3rem;
+  font-weight: bold;
+  float: left;
+  line-height: 1;
+  margin-right: 10px;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+.image-row {
+  display: flex;
+  /* justify-content: space-around; */
+  justify-content: center;
+  align-items: center;
+  margin: 2%;
+}
+
+figure {
+  display: flex;
+  flex-direction: column; /* Stack image and caption vertically */
+  align-items: center; /* Center items horizontally */
+  margin: 0 10px; /* Optional: add some spacing between figures */
+}
+figure img {
+  display: block; /* Ensure the image is treated as a block element */
+  margin: 0 auto; /* Center the image */
+}
+
+figure figcaption {
+  margin-top: 5px; /* Add space between the image and caption */
+  text-align: center; /* Center the caption text */
+}
